@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include ../../partials/navbar %>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% runs.forEach(function(run){ %>
+    <h2>Date: <%= run.date %></h2>
+    <h2>Time: <%= run.time %></h2>
+    <h2>Distance: <%= run.distance %> miles</h2>
+    <h2>Difficulty: <%= run.difficulty %></h2>
+    <img src=<%= run.image %>>
+    <% }) %>
+  </body>
+</html>
